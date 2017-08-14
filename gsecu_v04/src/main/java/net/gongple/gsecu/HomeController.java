@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import net.gongple.gsecu.domain.User;
+
 @Controller
 public class HomeController {
 	
@@ -47,9 +49,13 @@ public class HomeController {
 	 */
 	@RequestMapping(value="/mypage", method=RequestMethod.GET)
 	public String mypage(Model model) {
+		String nickName = "";
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		String userName = auth.getName();
-		model.addAttribute("nickName", userName);
+		Object principal = auth.getPrincipal();
+		if(principal != null && principal instanceof User) {
+			nickName = ((User) principal).getNickName();
+		}
+		model.addAttribute("nickName", nickName);
 		return "mypage";
 	}
 	

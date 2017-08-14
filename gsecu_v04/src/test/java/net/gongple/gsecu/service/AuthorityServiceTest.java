@@ -23,7 +23,7 @@ public class AuthorityServiceTest {
 		
 		Authority auth = new Authority();
 		User user = new User();
-		user.setUserId(new Long(1004));
+		user.setId(new Long(1004));
 		auth.setUser(user);
 		auth.setAuthCode("ROLE_H_ADMIN");
 		auth.setAuthName("최고관리자");
@@ -31,7 +31,7 @@ public class AuthorityServiceTest {
 		
 		auth = new Authority();
 		user = new User();
-		user.setUserId(new Long(1005));
+		user.setId(new Long(1005));
 		auth.setUser(user);
 		auth.setAuthCode("ROLE_M_ADMIN");
 		auth.setAuthName("중간관리자");
@@ -39,7 +39,7 @@ public class AuthorityServiceTest {
 		
 		auth = new Authority();
 		user = new User();
-		user.setUserId(new Long(1006));
+		user.setId(new Long(1006));
 		auth.setUser(user);
 		auth.setAuthCode("ROLE_L_ADMIN");
 		auth.setAuthName("실무관리자");
@@ -47,7 +47,7 @@ public class AuthorityServiceTest {
 		
 		auth = new Authority();
 		user = new User();
-		user.setUserId(new Long(1007));
+		user.setId(new Long(1007));
 		auth.setUser(user);
 		auth.setAuthCode("ROLE_USER");
 		auth.setAuthName("사용자");

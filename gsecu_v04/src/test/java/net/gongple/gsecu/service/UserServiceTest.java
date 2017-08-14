@@ -20,23 +20,23 @@ public class UserServiceTest {
 	private List<User> makeInputData() {
 		List<User> inputDatas = new ArrayList<User>();
 		User user = new User();
-		user.setUserName("adminh");
-		user.setPassword("1234h");
+		user.setUserId("adminh");
+		user.setUserPwd("1234h");
 		inputDatas.add(user);
 		
 		user = new User();
-		user.setUserName("adminm");
-		user.setPassword("1234m");
+		user.setUserId("adminm");
+		user.setUserPwd("1234m");
 		inputDatas.add(user);
 		
 		user = new User();
-		user.setUserName("adminl");
-		user.setPassword("1234l");
+		user.setUserId("adminl");
+		user.setUserPwd("1234l");
 		inputDatas.add(user);
 		
 		user = new User();
-		user.setUserName("user");
-		user.setPassword("1234u");
+		user.setUserId("user");
+		user.setUserPwd("1234u");
 		inputDatas.add(user);
 		
 		return inputDatas;
@@ -49,14 +49,14 @@ public class UserServiceTest {
 		
 		for(User user : inputData) {
 			System.out.println("@");
-			System.out.println("@ Id: "+ user.getUserId() +", UserName: "+ user.getUserName() +", PassWord: "+ user.getPassword());
+			System.out.println("@ Id: "+ user.getId() +", UserId: "+ user.getUserId() +", UserPwd: "+ user.getUserPwd());
 			usrSvc.add(user);
 		}
 		
 		List<User> users = usrSvc.findAll();
 		for(User user : users) {
 			System.out.println("#");
-			System.out.println("# Id: "+ user.getUserId() +", UserName: "+ user.getUserName() +", PassWord: "+ user.getPassword());
+			System.out.println("# Id: "+ user.getId() +", UserId: "+ user.getUserId() +", UserPwd: "+ user.getUserPwd());
 		}
 	}
 }

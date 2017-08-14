@@ -6,6 +6,6 @@ import net.gongple.gsecu.domain.User;
 
 public interface UserDao extends JpaRepository<User, Long> {
 	
-	User findByUserName(String userName);
+	User findByUserId(String userId);
 	
 }
